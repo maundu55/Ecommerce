@@ -7,11 +7,11 @@ const Products = () => {
   return (
     <section className='card-container'>
       <section className='card'>
-      <img src="https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg" alt="shoe" />
+      <img src="https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg" alt="shoe" className='card-img'/>
       <div className='card-details'>
         <h3 className='card-title'>Shoe</h3>
         <section className='card-reviews'>
-          <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar />
+          <AiFillStar className='ratings-stars' /> <AiFillStar  className='ratings-stars'/> <AiFillStar className='ratings-stars' /> <AiFillStar className='ratings-stars' />
           <span className='total-reviews'>4</span>
         </section>
 
@@ -21,7 +21,7 @@ const Products = () => {
           </div>
 
           <div className='bag'>
-          <BsFillBagHeartFill />
+          <BsFillBagHeartFill className='bag-icon'/>
           </div>
         </section>
       </div>
