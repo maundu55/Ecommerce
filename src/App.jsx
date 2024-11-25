@@ -13,6 +13,7 @@ function App() {
     <Nav />
     <Products />
     <Recommended />
+    
   
     </>
   )
