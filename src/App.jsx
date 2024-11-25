@@ -11,8 +11,8 @@ function App() {
 
   return (
     <>
-    <Nav />
     <Sidebar />
+    <Nav />
     <Recommended />
     <Products />
     
