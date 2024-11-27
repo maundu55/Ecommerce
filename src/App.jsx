@@ -19,7 +19,10 @@ const handleInputChange =e=>{
   setQuery(e.target.value);
 };
 
-const filteredItems = data.filter((item)=>item.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!== -1));
+const filteredItems = data.filter(
+  (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+);
+
 
 //-------Radio Filter -----
 const handleChange =e=>{
@@ -63,13 +66,13 @@ newPrice = {newPrice}
 />
 ));
 }
-  filteredData(data,selectedCategory,query)
+  const result = filteredData(data,selectedCategory,query)
   return (
     <>
     <Sidebar handleChange={handleChange} />
-    <Nav />
-    <Recommended />
-    <Products />
+    <Nav query={query} handleInputChange={handleInputChange} />
+    <Recommended handleClick={handleClick} />
+    <Products result={result} />
     
   
     </>

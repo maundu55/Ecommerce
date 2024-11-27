@@ -1,22 +1,23 @@
 import React from 'react'
-import { BsFillBagHeartFill } from 'react-icons/bs'
 import { AiFillStar } from 'react-icons/ai'
+import { BsFillBagHeartFill } from 'react-icons/bs'
 
-const Card = () => {
+
+const Card = ({img,title,star, reviews, prevPrice, newPrice }) => {
   return (
     <div>
       <section className='card'>
-      <img src="https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg" alt="shoe" className='card-img'/>
+      <img src={img} alt={title} className='card-img'/>
       <div className='card-details'>
-        <h3 className='card-title'>Shoe</h3>
+        <h3 className='card-title'>{title}</h3>
         <section className='card-reviews'>
-          <AiFillStar className='ratings-stars' /> <AiFillStar  className='ratings-stars'/> <AiFillStar className='ratings-stars' /> <AiFillStar className='ratings-stars' />
-          <span className='total-reviews'>4</span>
+        <AiFillStar className="rating-star"/> <AiFillStar className="rating-star"/> <AiFillStar className="rating-star"/> <AiFillStar className="rating-star"/>
+          <span className='total-reviews'>{reviews}</span>
         </section>
 
         <section className='card-price'>
           <div className='price'> 
-          <del>$300</del> 200
+          <del>{prevPrice}</del> {newPrice}
           </div>
 
           <div className='bag'>
