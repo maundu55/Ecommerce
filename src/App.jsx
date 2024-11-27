@@ -66,7 +66,7 @@ newPrice = {newPrice}
   filteredData(data,selectedCategory,query)
   return (
     <>
-    <Sidebar />
+    <Sidebar handleChange={handleChange} />
     <Nav />
     <Recommended />
     <Products />
